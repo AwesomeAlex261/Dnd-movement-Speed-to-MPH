@@ -1,0 +1,29 @@
+<h1>Dnd Speed to MPH</h1>
+<a href=index.html>[Home]</a>
+<hr />
+<form onsubmit="saveVariable(event)">
+  <label for="textBox">Enter Text:</label>
+  <input type="text" id="textBox" name="textBox" required>
+  <button type="submit">Submit</button>
+</form>
+
+<div id="displayResult"></div>
+
+<script>
+  function saveVariable(event) {
+    event.preventDefault(); // Prevents the form from submitting in the traditional way
+
+    // Get the value from the text box
+    var inputValue = document.getElementById("textBox").value;
+
+    // Save the value to the variable DnDG1
+    window.DnDS1 = inputValue;
+    window.DNDS2 = DnDS1/6
+    window.RWS = DNDS2*2.2369
+    // Display the value in the "displayResult" div
+    document.getElementById("displayResult").innerHTML =  window.RWS + "Mph";
+  }
+</script>
+<br />
+  </body>
+</html>
